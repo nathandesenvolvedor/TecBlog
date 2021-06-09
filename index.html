@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TecBlog - o seu blog da tecnologia</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            background-color: #e6e6e6;
+        }
+        
+        #menu_principal {
+            background-color: #f7b600;
+            height: 200px;
+        }
+        
+        .letra_tec {
+            margin: 0px;
+            margin-left: 600px;
+            color: #4e4e4e;
+            font-size: 50pt;
+        }
+        
+        .letra_blog {
+            color: white;
+        }
+        
+        #menu_principal_lnks {
+            margin-left: 450px;
+            margin-top: 80px;
+        }
+        
+        .link_menu {
+            padding: 7px 20px 7px 20px;
+            text-decoration: none;
+            color: white;
+            font-size: 15pt;
+        }
+        
+        .link_menu:hover {
+            background-color: white;
+            color: #f7b600;
+        }
+        
+        .borda_menuprincipal {
+            width: 100%;
+            height: 10px;
+            margin-bottom: 20px;
+            background-color: #4e4e4e;
+        }
+        
+        #post_1_div {
+            background-color: white;
+            padding-left: 30px;
+            padding-top: 20px;
+            height: 820px;
+            width: 700px;
+            margin-left: 200px;
+            margin-bottom: 40px;
+        }
+        
+        .imagem_1_2 {
+            margin-left: 15px;
+        }
+        
+        .informaca_post {
+            margin-left: 15px;
+        }
+        
+        .titulo_post1 {
+            color: #f7b600;
+        }
+        
+        .decricao_post1 {
+            font-size: 15pt;
+            width: 650px;
+            margin-left: 15px;
+        }
+        
+        .link1 {
+            text-decoration: none;
+            margin-left: 15px;
+            color: #f7b600;
+        }
+        
+        .link1:hover {
+            color: #ffc935;
+        }
+        
+        #post_2_div {
+            background-color: white;
+            padding-left: 30px;
+            padding-top: 20px;
+            height: 820px;
+            width: 700px;
+            margin-left: 200px;
+            margin-bottom: 100px;
+        }
+        
+        .informaca_post2 {
+            margin-left: 15px;
+        }
+        
+        .titulo_post2 {
+            color: #f7b600;
+        }
+        
+        .img_3_2 {
+            margin-left: 15px;
+        }
+        
+        .decricao_post2 {
+            font-size: 15pt;
+            width: 650px;
+            margin-left: 15px;
+        }
+        
+        .link2 {
+            text-decoration: none;
+            margin-left: 15px;
+            color: #f7b600;
+        }
+        
+        .link2:hover {
+            color: #ffc935;
+        }
+        
+        .img_email {
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            top: 700px;
+            left: 20px;
+            position: fixed;
+        }
+        
+        #postagem_recente {
+            background-color: white;
+            width: 350px;
+            height: 350px;
+            position: absolute;
+            top: 234px;
+            right: 100px;
+        }
+        
+        .descricao_post_recent {
+            background-color: #c3c3c3;
+            margin-left: 20px;
+            width: 300px;
+            padding: 5px;
+        }
+        
+        .descricao_recent {
+            margin-left: 20px;
+            width: 300px;
+        }
+        
+        .link_postagens {
+            text-decoration: none;
+            color: #f7b600;
+            margin-left: 20px;
+        }
+        
+        .link_postagens:hover {
+            color: #ffc935;
+        }
+        
+        .descricao_recent2 {
+            margin-left: 20px;
+            width: 300px;
+        }
+        
+        .link_postagens2 {
+            text-decoration: none;
+            color: #f7b600;
+            margin-left: 20px;
+        }
+        
+        .link_postagens2:hover {
+            color: #ffc935;
+        }
+        
+        #categorias {
+            background-color: white;
+            width: 350px;
+            height: 200px;
+            position: absolute;
+            top: 600px;
+            right: 100px;
+        }
+        
+        .descricao_categorias {
+            background-color: #c3c3c3;
+            margin-left: 20px;
+            width: 300px;
+            padding: 5px;
+        }
+        
+        .categorias_link1 {
+            display: block;
+            margin-left: 20px;
+            text-decoration: none;
+            color: #f7b600;
+            margin-bottom: 5px;
+        }
+        
+        .categorias_link2 {
+            display: block;
+            margin-left: 20px;
+            text-decoration: none;
+            color: #f7b600;
+            margin-bottom: 5px;
+        }
+        
+        .categorias_link3 {
+            display: block;
+            margin-left: 20px;
+            text-decoration: none;
+            color: #f7b600;
+            margin-bottom: 5px;
+        }
+        
+        .categorias_link4 {
+            display: block;
+            margin-left: 20px;
+            text-decoration: none;
+            color: #f7b600;
+            margin-bottom: 5px;
+        }
+        
+        .categorias_link1:hover {
+            color: #ffc935;
+        }
+        
+        .categorias_link2:hover {
+            color: #ffc935;
+        }
+        
+        .categorias_link3:hover {
+            color: #ffc935;
+        }
+        
+        .categorias_link4:hover {
+            color: #ffc935;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+
+
+
+
+    <div id="menu_principal">
+
+        <h1 class="letra_tec">Tec<span class="letra_blog">Blog</span></h1>
+
+        <div id="menu_principal_lnks">
+
+            <a href="#" class="link_menu">Home</a>
+            <a href="#" class="link_menu">Jogos</a>
+            <a href="#" class="link_menu">Celulares</a>
+            <a href="#" class="link_menu">Informatica</a>
+            <a href="#" class="link_menu">Eletronicos</a>
+
+        </div>
+
+    </div>
+
+    <div class="borda_menuprincipal">
+    </div>
+
+    <div id="post_1_div">
+
+        <article class="informaca_post">
+            <h1 class="titulo_post1">Titulo da postagem 1</h1>
+            <h4><strong>postado em 10 de Marco 2021</strong></h4>
+        </article>
+        <img src="img/imagem2.jpg" alt="img_1" class="imagem_1_2">
+
+        <p class="decricao_post1">
+
+
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum et nibh a euismod. Nullam tincidunt leo ut ligula tempor, vel auctor libero aliquam. Morbi et tellus sed nisl viverra cursus. Donec ac metus viverra, eleifend nisi non, laoreet sapien.
+            Curabitur scelerisque leo sed turpis porta elementum. Nunc pharetra quam sapien. Aliquam a tristique lacus. Nullam dictum lacinia eleifend. Etiam ut ante pretium, aliquet nulla vel, iaculis est. Fusce id euismod libero. Nam consequat feugiat
+            justo, vel pulvinar sem consectetur nec. Nunc tempor odio a nulla aliquet tristique. Donec porttitor finibus eros sit amet maximus. Curabitur euismod lacus sit amet lacus dictum commodo.
+
+
+        </p>
+
+        <a href="#" class="link1">Leia mais</a>
+
+    </div>
+
+    <div id="post_2_div">
+
+
+        <article class="informaca_post2">
+            <h1 class="titulo_post2">Titulo da postagem 2</h1>
+            <h4><strong>postado em 15 de Marco 2021</strong></h4>
+        </article>
+
+        <img src="img/imagem3.jpg" alt="img_2" class="img_3_2">
+
+        <p class="decricao_post2">
+
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum et nibh a euismod. Nullam tincidunt leo ut ligula tempor, vel auctor libero aliquam. Morbi et tellus sed nisl viverra cursus. Donec ac metus viverra, eleifend nisi non, laoreet sapien.
+            Curabitur scelerisque leo sed turpis porta elementum. Nunc pharetra quam sapien. Aliquam a tristique lacus. Nullam dictum lacinia eleifend. Etiam ut ante pretium, aliquet nulla vel, iaculis est. Fusce id euismod libero. Nam consequat feugiat
+            justo, vel pulvinar sem consectetur nec. Nunc tempor odio a nulla aliquet tristique. Donec porttitor finibus eros sit amet maximus. Curabitur euismod lacus sit amet lacus dictum commodo.
+
+        </p>
+
+        <a href="#" class="link2">Leia mais</a>
+
+    </div>
+
+    <img src="img/o-email.png" alt="email" class="img_email">
+
+    <div id="postagem_recente">
+
+        <h1 class="descricao_post_recent">Postagens recentes</h1>
+
+        <p class="descricao_recent">
+
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum et nibh a euismod. Nullam tincidunt leo ut ligula tempor, vel auctor libero aliquam
+
+        </p>
+
+        <a href="#" class="link_postagens">Ler mais</a>
+
+        <hr/>
+
+        <p class="descricao_recent2">
+
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum et nibh a euismod. Nullam tincidunt leo ut ligula tempor, vel auctor libero aliquam
+
+
+        </p>
+
+        <a href="#" class="link_postagens2">Ler mais</a>
+
+    </div>
+
+    <div id="categorias">
+
+        <h1 class="descricao_categorias">Categorias</h1>
+
+
+
+        <a href="" class="categorias_link1">Jogos</a>
+        <a href="" class="categorias_link2">Celulares</a>
+        <a href="" class="categorias_link3">Informatica</a>
+        <a href="" class="categorias_link4">Eletronicos</a>
+
+
+
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>
